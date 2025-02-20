@@ -3236,5 +3236,27 @@
       "Speed": 100
     },
     "image": "http://localhost:3000/assets/pokemons/151.png"
+  },
+  {
+    "id": 152,
+    "name": {
+      "english": "Mymy",
+      "japanese": "ミミ",
+      "chinese": "毛毛",
+      "french": "Mimi"
+    },
+    "type": [
+      "Psychic",
+      "Poison"
+    ],
+    "base": {
+      "HP": 99,
+      "Attack": 99,
+      "Defense": 99,
+      "Sp. Attack": 100,
+      "Sp. Defense": 100,
+      "Speed": 100
+    },
+    "image": "http://localhost:3000/assets/pokemons/9.png"
   }
 ]
