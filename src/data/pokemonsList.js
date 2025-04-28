@@ -3240,6 +3240,27 @@ const pokemonsList = [
             "Speed": 100
         },
         "image": `${process.env.API_URL}/assets/pokemons/151.png`
+    },
+    {
+        "id": 152,
+        "name": {
+            "english": "Mew",
+            "japanese": "ミュウ",
+            "chinese": "梦幻",
+            "french": "Mew"
+        },
+        "type": [
+            "Psychic"
+        ],
+        "base": {
+            "HP": 100,
+            "Attack": 100,
+            "Defense": 100,
+            "Sp. Attack": 100,
+            "Sp. Defense": 100,
+            "Speed": 100
+        },
+        "image": `${process.env.API_URL}/assets/pokemons/151.png`
     }
 ]
 

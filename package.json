@@ -1,5 +1,5 @@
 {
-  "name": "pokemon-api-workshop",
+  "name": "pokedex-api",
   "version": "1.0.0",
   "description": "Atelier API REST pour étudiants en cybersécurité",
   "type": "module",
@@ -7,14 +7,18 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
-    "generate-pokemons": "node src/data/generatePokemonsJson.js"
+    "import-data": "node src/scripts/importData.js"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "dotenv": "^16.4.7",
-    "express": "^4.18.2"
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3",
+    "mongoose": "^8.2.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.22"
+    "nodemon": "^3.1.0"
   }
 }
