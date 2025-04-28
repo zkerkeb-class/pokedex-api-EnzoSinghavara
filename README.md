@@ -11,7 +11,7 @@ Ce backend Node.js/Express/MongoDB gère l'API REST du Pokédex. Il permet l'aut
 1. Cloner le dépôt et se placer dans le dossier backend :
 
 ```bash
-git clone <url-du-repo>
+git clone https://github.com/zkerkeb-class/pokedex-api-EnzoSinghavara.git
 cd pokedex-api-EnzoSinghavara
 ```
 
