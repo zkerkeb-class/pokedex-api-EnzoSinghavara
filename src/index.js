@@ -6,6 +6,8 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import connectDB from "./config/database.js";
 import Pokemon from "./models/pokemon.js";
+import authRoutes from './routes/auth.js';
+import authMiddleware from './middleware/auth.js';
 
 dotenv.config();
 
@@ -74,7 +76,7 @@ function normalizeSpStats(base) {
 }
 
 // POST - Create a new pokemon
-app.post("/api/pokemons", async (req, res) => {
+app.post("/api/pokemons", authMiddleware, async (req, res) => {
   try {
     req.body.base = normalizeSpStats(req.body.base);
     const { id, name, type, base, image } = req.body;
@@ -96,7 +98,7 @@ app.post("/api/pokemons", async (req, res) => {
 });
 
 // PUT - Update a pokemon
-app.put("/api/pokemons/:id", async (req, res) => {
+app.put("/api/pokemons/:id", authMiddleware, async (req, res) => {
   try {
     req.body.base = normalizeSpStats(req.body.base);
     const pokemon = await Pokemon.findOneAndUpdate(
@@ -112,7 +114,7 @@ app.put("/api/pokemons/:id", async (req, res) => {
 });
 
 // DELETE - Delete a pokemon
-app.delete("/api/pokemons/:id", async (req, res) => {
+app.delete("/api/pokemons/:id", authMiddleware, async (req, res) => {
   try {
     const pokemon = await Pokemon.findOneAndDelete({ id: parseInt(req.params.id) });
     if (!pokemon) return res.status(404).json({ status: 404, message: "Pokemon non trouvé" });
@@ -121,6 +123,8 @@ app.delete("/api/pokemons/:id", async (req, res) => {
     res.status(500).json({ status: 500, message: "Erreur serveur" });
   }
 });
+
+app.use('/api/auth', authRoutes);
 
 // Démarrage du serveur
 app.listen(PORT, () => {

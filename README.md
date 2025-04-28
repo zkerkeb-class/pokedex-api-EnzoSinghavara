@@ -1,3 +1,71 @@
+# Pokédex ECE – Backend
+
+## Description du projet
+
+Ce backend Node.js/Express/MongoDB gère l'API REST du Pokédex. Il permet l'authentification sécurisée (JWT), la gestion des utilisateurs, et le CRUD complet sur les Pokémon. Toutes les routes critiques sont protégées par un middleware d'authentification.
+
+---
+
+## Installation
+
+1. Cloner le dépôt et se placer dans le dossier backend :
+
+```bash
+git clone <url-du-repo>
+cd pokedex-api-EnzoSinghavara
+```
+
+2. Installer les dépendances :
+
+```bash
+npm install
+```
+
+3. Configurer l'environnement :
+- Créer un fichier `.env` à la racine (voir `.env.example` si présent)
+- Exemple de variables :
+  ```env
+  MONGODB_URI=mongodb://localhost:27017/pokedex
+  JWT_SECRET=une_chaine_secrete
+  PORT=3000
+  ```
+
+4. Lancer le serveur :
+
+```bash
+npm start
+```
+
+- L'API sera accessible sur `http://localhost:3000`
+
+---
+
+## Documentation de l'API
+
+### Authentification
+- `POST /api/auth/login` – Connexion
+- `POST /api/auth/register` – Création de compte
+
+### Pokémon
+- `GET /api/pokemons` – Liste tous les Pokémon
+- `GET /api/pokemons/:id` – Détail d'un Pokémon
+- `POST /api/pokemons` – Créer un Pokémon (**authentifié**)
+- `PUT /api/pokemons/:id` – Modifier un Pokémon (**authentifié**)
+- `DELETE /api/pokemons/:id` – Supprimer un Pokémon (**authentifié**)
+
+**Toutes les routes POST/PUT/DELETE nécessitent le header :**
+```
+Authorization: Bearer <token>
+```
+
+---
+
+## Lien vers la vidéo de démonstration
+
+👉 [Voir la démo sur YouTube](https://youtu.be/Md4c6YVMc9s)
+
+---
+
 ## Concepts à Comprendre
 1. REST API
    - Méthodes HTTP (GET, POST, PUT, DELETE)
@@ -39,18 +107,6 @@ app.use(cors({
 - [Documentation Express.js](https://expressjs.com/fr/)
 - [Guide des Status HTTP](https://developer.mozilla.org/fr/docs/Web/HTTP/Status)
 - [REST API Best Practices](https://restfulapi.net/)
-
-## Support
-Pour toute question ou problème :
-1. Vérifiez la documentation
-2. Consultez les messages d'erreur dans la console
-3. Demandez de l'aide à votre formateur
-
-## Prochaines Étapes
-- Ajout d'une base de données (MongoDB)
-- Implémentation de tests automatisés
-- Déploiement de l'API
-- Documentation avec Swagger
 
 ## Gestion des Fichiers Statiques
 Le serveur expose le dossier `assets` pour servir les images des Pokémon. Les images sont accessibles via l'URL :
