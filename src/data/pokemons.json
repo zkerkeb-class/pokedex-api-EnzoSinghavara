@@ -47,13 +47,13 @@
     "id": 3,
     "name": {
       "english": "Venusaur",
+      "french": "Florizarre",
       "japanese": "フシギバナ",
-      "chinese": "妙蛙花",
-      "french": "Florizarre"
+      "chinese": "妙蛙花"
     },
     "type": [
-      "Grass",
-      "Poison"
+      "Poison",
+      "Ground"
     ],
     "base": {
       "HP": 80,
@@ -3218,6 +3218,27 @@
   },
   {
     "id": 151,
+    "name": {
+      "english": "Mew",
+      "japanese": "ミュウ",
+      "chinese": "梦幻",
+      "french": "Mew"
+    },
+    "type": [
+      "Psychic"
+    ],
+    "base": {
+      "HP": 100,
+      "Attack": 100,
+      "Defense": 100,
+      "Sp. Attack": 100,
+      "Sp. Defense": 100,
+      "Speed": 100
+    },
+    "image": "http://localhost:3000/assets/pokemons/151.png"
+  },
+  {
+    "id": 152,
     "name": {
       "english": "Mew",
       "japanese": "ミュウ",
