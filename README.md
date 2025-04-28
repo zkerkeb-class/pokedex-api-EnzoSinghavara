@@ -103,11 +103,6 @@ app.use(cors({
 }));
 ```
 
-## Ressources Additionnelles
-- [Documentation Express.js](https://expressjs.com/fr/)
-- [Guide des Status HTTP](https://developer.mozilla.org/fr/docs/Web/HTTP/Status)
-- [REST API Best Practices](https://restfulapi.net/)
-
 ## Gestion des Fichiers Statiques
 Le serveur expose le dossier `assets` pour servir les images des Pokémon. Les images sont accessibles via l'URL :
 ```
